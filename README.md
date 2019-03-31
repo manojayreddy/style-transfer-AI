@@ -8,8 +8,8 @@ Add styles from famous paintings to any photo in a fraction of a second! [You ca
 <a href = 'examples/results/stata_udnie.jpg'><img src = 'examples/results/stata_udnie_header.jpg' width = '627px'></a>
 </p>
 <p align = 'center'>
-     Tested this using NVIDIA TESLA V100 VOLTA GPU ACCELERATOR 16GB
-It takes 100ms on a 2015 Titan X to style the MIT Stata Center (1024×680) like Udnie, by Francis Picabia.
+     Tested this using NVIDIA TESLA V100 VOLTA GPU ACCELERATOR 16GB.
+It takes 100ms on a 2015 Titan X to style the MIT Stata Center (1024×680).
 </p>
 
 This implementation is based off of a combination of Gatys' [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576), Johnson's [Perceptual Losses for Real-Time Style Transfer and Super-Resolution](http://cs.stanford.edu/people/jcjohns/eccv16/), and Ulyanov's [Instance Normalization](https://arxiv.org/abs/1607.08022). 
@@ -52,7 +52,7 @@ We added styles from various paintings to a photo of Chicago. Click on thumbnail
 </div>
 
 ## Implementation Details
-Our implementation uses TensorFlow to train a fast style transfer network. We use roughly the same transformation network as described in Johnson, except that batch normalization is replaced with Ulyanov's instance normalization, and the scaling/offset of the output `tanh` layer is slightly different. We use a loss function close to the one described in Gatys, using VGG19 instead of VGG16 and typically using "shallower" layers than in Johnson's implementation (e.g. we use `relu1_1` rather than `relu1_2`). Empirically, this results in larger scale style features in transformations.
+This implementation uses TensorFlow to train a fast style transfer network. I've use roughly the same transformation network as described in Johnson, except that batch normalization is replaced with Ulyanov's instance normalization, and the scaling/offset of the output `tanh` layer is slightly different. I've used a loss function close to the one described in Gatys, using VGG19 instead of VGG16 and typically using "shallower" layers than in Johnson's implementation (e.g. we use `relu1_1` rather than `relu1_2`). Empirically, this results in larger scale style features in transformations.
 
 ## Documentation
 ### Training Style Transfer Networks
@@ -93,11 +93,11 @@ You will need the following to run the above:
 
 ### Citation
 ```
-  @misc{engstrom2016faststyletransfer,
-    author = {Logan Engstrom},
+  @misc{manojayreddy2018faststyletransfer,
+    author = {Manojay Reddy Mothe},
     title = {Fast Style Transfer},
     year = {2016},
-    howpublished = {\url{https://github.com/lengstrom/fast-style-transfer/}},
+    howpublished = {\url{https://github.com/manojayreddy/style-transfer-AI/}},
     note = {commit xxxxxxx}
   }
 ```
